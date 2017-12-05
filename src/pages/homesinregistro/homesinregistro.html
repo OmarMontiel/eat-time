@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-grid>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col>
+          <button class="log" ion-button icon-left block (click)="logIn()">
+            <ion-icon name="log-in"></ion-icon>
+            Log In
+          </button>    
+        </ion-col>
+        <ion-col>
+          <button class="sign" ion-button icon-left block (click)="createAccount()">
+            <ion-icon name="person-add"></ion-icon>
+            Sign Up
+          </button>    
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-card class="cards" *ngFor="let card of cards" (click)="viewCard(card.nombre)">
+
+          <p>{{ card.nombre }}</p>
+          <img src="../assets/imgs/restaurante.jpg"/>
+          <p>{{ card.descripcion }}</p>
+              
+          </ion-card>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>
+          {{ card.nombre }}
+      </ion-title>
+      <ion-icon name="arrow-back" (click)="closeModal()"></ion-icon>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content class="card-background-page">
+      <div class="float-button">
+        <span class="height-fix">
+          <a class="content" (click)="irpagina(card.nombre)">
+            <ion-icon name="md-add"></ion-icon>
+          </a>
+        </span>
+      </div>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-list>
+              <ion-card class="cards" *ngFor="let card of cards"  >
+                <p>{{ card.nombremenu }}</p>
+               <img src="../assets/imgs/logo.png"/>
+               <p>{{card.precio}}</p>
+               <!--
+                <button ion-button (click)="viewCard(card.nombre)">editar</button>
+                <button ion-button (click)= "irpagina(card.nombre)">menu</button>
+               -->
+                
+              </ion-card>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-content>
+    
+  

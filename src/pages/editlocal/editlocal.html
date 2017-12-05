@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>Editar local</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="closeModal()">
+          <ion-icon item-right name="ios-close-outline"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content class="cont">
+    <ion-card>
+      <img src="assets/img/wallpaper.png"/>
+      <ion-item>
+        
+      </ion-item>
+      <ion-card-content>
+        <ion-grid>
+    
+          <ion-row>
+            <ion-col col-4>
+              <h3>local:</h3>
+            </ion-col>
+            <ion-col>
+              <h3>{{ card.nombre }}</h3>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-4>
+            <h3>descripcion:</h3>
+            </ion-col>
+            <ion-col>
+              <h3>{{ card.descripcion }}</h3>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <button class="sign" ion-button round full (click)="editCard()">
+                Edit local
+              </button>
+            </ion-col>
+            <ion-col>
+              <button class="sign" style="background-color: red;" ion-button round full (click)="deleteCard()">
+                Delete local
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+  

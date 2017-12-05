@@ -1,0 +1,29 @@
+<ion-content class="card-background-page">
+    <div class="float-button">
+      <span class="height-fix">
+        <a class="content" (click)="createTutoria()">
+          <ion-icon name="md-add"></ion-icon>
+        </a>
+      </span>
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-card class="cards" *ngFor="let card of cards"  >
+             
+
+              <p>{{ card.nombre }}</p>
+              <img src="../assets/imgs/restaurante.jpg"/>
+              <p>{{ card.descripcion }}</p>
+            
+              <button ion-button (click)="viewCard(card.nombre)">editar</button>
+              <button ion-button (click)= "irpagina(card.nombre)">menu</button>
+              
+            </ion-card>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  

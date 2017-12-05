@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>userinfo</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content class="cont">
+    <ion-item>
+      <ion-label floating>Nomn</ion-label>
+      <ion-input [(ngModel)]="userinfo.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Last name</ion-label>
+      <ion-input [(ngModel)]="userinfo.lastname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>¿Eres ventetor?</ion-label>
+      <ion-checkbox [(ngModel)]="userinfo.ventor"></ion-checkbox>
+    </ion-item>
+    <button ion-button block (click)="createProfile()">Create profile</button>
+  </ion-content>
+  

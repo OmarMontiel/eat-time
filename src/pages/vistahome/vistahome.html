@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+        {{ card.nombre }}
+    </ion-title>
+    <ion-icon name="arrow-back" (click)="closeModal()"></ion-icon>    
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-list>
+
+              <ion-card class="cards" *ngFor="let card of cards" >
+                  
+               <p>{{ card.nombremenu }}</p>
+               <img src="../assets/imgs/logo.png"/>
+               <p>{{card.precio}}</p>
+               <!--
+               <button ion-button block >Favorito</button>
+               -->
+              </ion-card>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    
+  </ion-content>
+  
